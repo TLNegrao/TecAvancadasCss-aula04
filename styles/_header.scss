@@ -1,0 +1,25 @@
+@mixin flexCenter($direcao, $background){
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direcao;
+    background: $background;
+}
+
+
+
+
+header{
+    @include flexCenter(column, red);
+
+    background: lightblue;
+    height: 100vh;
+    color: $corTexto;
+    button{
+        background: $baseBotao;
+        &::after{
+            content: '55555';
+        }
+    }
+}
